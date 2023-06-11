@@ -1,0 +1,146 @@
+:root {
+  --text: hsl(0, 0%, 0%);
+  --background: hsl(0, 0%, 100%);
+  --primary-clr: hsl(200, 100%, 78%);
+  --secondary-clr: hsl(200, 100%, 96%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clr-btn {
+  background: gray;
+  padding: 1rem 1.8rem;
+  font-size: 18px;
+  
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.clr-btn-first {
+  background-color: var(--primary-clr);
+}
+
+.clr-btn-2nd {
+  background-color: var(--secondary-clr);
+}
+
+.btn-shadow {
+  transition: all 200ms linear;
+}
+
+.btn-shadow:hover {
+  box-shadow: 0px 2rem 4rem var(--primary-clr);
+}
+
+
+.nav-right ul > *,
+.main-left-btns > * {
+  transition: transform 200ms linear;
+}
+
+.nav-right ul > *:hover,
+.main-left-btns > *:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+/* header  start */
+
+#header {
+  min-height: 100vh;
+  padding-inline: clamp(1rem, 15vw, 13rem);
+
+  margin-top: 1.5rem;
+}
+
+.nav, .nav-left, .nav-right, .nav-right > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  gap: 1rem;
+
+  cursor: pointer;
+}
+
+.nav-left .logo {
+  transition: transform 400ms ease-in-out;
+  width: 50px;
+  aspect-ratio: 1;
+  transform: rotate(0deg);
+}
+
+.nav-left:hover .logo {
+  transform: rotate(360deg);
+}
+
+/* .againLogo {
+  transform: rotate(360deg);
+} */
+
+
+.nav-right ul{
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.nav-right ul > * {
+  cursor: pointer;
+}
+
+.nav-right .li-last--span {
+  background: var(--text);
+  color: var(--background);
+  font-size: 12px;
+  
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* header  end */
+
+
+
+
+/* mobile  > 400px */
+
+
+
