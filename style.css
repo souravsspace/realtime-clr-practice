@@ -1,5 +1,7 @@
 :root {
   --text: hsl(0, 0%, 0%);
+  --text-low: hsl(0 0% 70%);
+  --text-low-more: hsl(0 0% 80%);
   --background: hsl(0, 0%, 100%);
   --primary-clr: hsl(200, 100%, 78%);
   --secondary-clr: hsl(200, 100%, 96%);
@@ -63,7 +65,7 @@ ul {
 
 .nav-right ul > *:hover,
 .main-left-btns > *:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 
@@ -125,7 +127,157 @@ ul {
 }
 
 
+#header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
 
+  gap: 3rem;
+}
+
+.main-left h1 {
+  font-size: 3.1rem;
+}
+
+.main-left h1 > span {
+  color: var(--primary-clr);
+}
+
+.main-left > p {
+  font-size: 1.75rem;
+  margin-block: 5rem;
+}
+
+.main-left-btns {
+  display: flex;
+  align-items: center;
+}
+
+.main-left > .scroll-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-block-start: 5rem;
+}
+
+
+.main-right {
+  text-align: right;
+}
+
+.main-right > div > svg {
+  margin-block-end: 5rem;
+}
+
+
+.main-right .colors--tab {
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 15px;
+  grid-template-rows: repeat(8, 50px);
+
+}
+
+
+.colors--tab > div {
+  border-radius: 5px;
+}
+
+
+
+.colors--tab div:nth-child(1){
+  background-color: var(--text-low);
+  grid-column: span 2;
+}
+.colors--tab div:nth-child(2){
+  background-color: var(--background);
+  grid-column: span 3;
+}
+.colors--tab div:nth-child(3){
+  background-color: var(--text-low-more);
+  grid-column: span 2;
+}
+.colors--tab div:nth-child(4){
+  background-color: var(--text-low);
+  grid-row: span 6;
+}
+.colors--tab div:nth-child(5){
+  background-color: var(--background);
+  grid-row: span 2;
+}
+.colors--tab div:nth-child(6){
+  background-color: var(--primary-clr);
+  grid-column: span 4;
+  grid-row: span 4;
+}
+.colors--tab div:nth-child(7){
+  background-color: var(--text-low-more);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.colors--tab div:nth-child(8){
+  background-color: var(--text-low-more);
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.colors--tab div:nth-child(9){
+  background-color: var(--text-low);
+  grid-row: 4 / span 3;
+}
+
+.colors--tab div:nth-child(10){
+  background-color: var(--text);
+  grid-column: span 2;
+  grid-row: span 2;
+  color: aliceblue;
+}
+
+.colors--tab div:nth-child(11){
+  background-color: var(--text-low);
+  grid-column: span 2;
+}
+.colors--tab div:nth-child(12){
+  background-color: var(--text-low);
+  grid-column: 4 / span 2;
+  grid-row: 7/8;
+}
+.colors--tab div:nth-child(13){
+  background-color: var(--secondary-clr);
+  grid-column: span 2;
+}
+.colors--tab div:nth-child(14){
+  background-color: var(--primary-clr);
+  grid-column: 6 / span 2;
+  grid-row: 7/ span 2;
+}
+
+.colors--tab div:nth-child(15){
+  background-color: var(--primary-clr);
+  grid-column: 8/9;
+  grid-row: 7/ span 3;
+}
+.colors--tab div:nth-child(16){
+  background-color: var(--background);
+  grid-row: 7/ span 3;
+}
+
+.colors--tab div:nth-child(17){
+  background-color: var(--background);
+  grid-column: 2 / span 2;
+  grid-row: 8 / span 2;
+}
+.colors--tab div:nth-child(18){
+  background-color: var(--text);
+  grid-column: span 2;
+  color: aliceblue;
+}
+.colors--tab div:nth-child(19){
+  background-color: var(--background);
+  grid-column: span 3;
+}
 
 
 
