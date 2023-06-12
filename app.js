@@ -7,6 +7,11 @@
 
 // logo.addEventListener("click", onMouseOut)
 
+let menuBtn = document.getElementById("menu-btn");
 
+menuBtn.addEventListener("click", function rotateXY(){
+  this.classList.toggle("rotate")
+  alert('ok')
+});
 
 

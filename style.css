@@ -75,7 +75,7 @@ ul {
 
 #header {
   min-height: 100vh;
-  padding-inline: clamp(1rem, 15vw, 13rem);
+  margin-inline: clamp(1rem, 15vw, 13rem);
 
   margin-top: 1.5rem;
 }
@@ -93,10 +93,10 @@ ul {
 }
 
 .nav-left .logo {
-  transition: transform 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
   width: 50px;
   aspect-ratio: 1;
-  transform: rotate(0deg);
+  transform: rotate(0);
 }
 
 .nav-left:hover .logo {
@@ -107,6 +107,33 @@ ul {
   transform: rotate(360deg);
 } */
 
+.nav-right .menu-btn {
+  position: relative;
+  width: 40px;
+  height: 20px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  display: none;
+}
+
+.menu-btn span {
+  position: absolute;
+  inset: 0;
+  
+  max-width: 35px;
+  max-height: 3.5px;
+
+  border-radius: 5px;
+  background: var(--text);
+}
+
+.menu-btn span:nth-child(2){
+  margin-top: 12px;
+}
 
 .nav-right ul{
   flex-direction: row;
@@ -131,13 +158,17 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6rem;
+  margin-top: clamp(6rem, 5vw, 2rem);
 
-  gap: 3rem;
+  gap: clamp(3rem, 10vw, 1rem);
+}
+
+.main-left, .main-right {
+  flex: 1;
 }
 
 .main-left h1 {
-  font-size: 3.1rem;
+  font-size: clamp(3.1rem, 5vh, 0.25rem);
 }
 
 .main-left h1 > span {
@@ -165,6 +196,7 @@ ul {
 
 .main-right {
   text-align: right;
+  margin-left: 5rem;
 }
 
 .main-right > div > svg {
@@ -175,8 +207,9 @@ ul {
 .main-right .colors--tab {
   display: grid;
   gap: 0.4rem;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 15px;
-  grid-template-rows: repeat(8, 50px);
+  /* grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 15px; */
+  grid-template-columns: repeat(8, minmax(25px, 50px));
+  grid-template-rows: repeat(8, minmax(25px, 50px));
 
 }
 
@@ -283,16 +316,77 @@ ul {
 
 
 
-
-
-
-
 /* header  end */
 
 
 
 
-/* mobile  > 400px */
 
 
 
+
+
+/* responsive */
+
+
+@media (max-width: 1400px) {
+  #header {
+    margin-inline: clamp(1rem, 10vw, 3rem);
+    margin-top: 2rem;
+  }
+  #header-main {
+    margin-block: clamp(2rem, 5vw, 1rem);
+  }
+
+  .main-left h1 {
+    font-size: clamp(2rem, 10vw, 1.75rem);
+  }
+
+  .main-left p {
+    font-size: clamp(1.2rem, 10vw, 0.8rem);
+  }
+  .main-left-btns > button {
+    font-size: clamp(1rem, 10vw, 0.8rem);
+  }
+  .scroll-icon > p {
+    font-size: clamp(0.9rem, 10vw, 0.8rem);
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-right > ul{
+    display: none;
+  }
+  .nav-right .menu-btn {
+    display: block;
+  }
+}  
+@media (max-width: 861px) {
+  #header-main {
+    flex-direction: column;
+  }
+  .main-right {
+    margin: 0;
+  }
+
+  .main-left > p {
+    margin-block: 2rem;
+  }
+
+  .main-right > div > svg {
+    margin-block-end: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #header {
+    margin-inline: 1rem;
+}
+}
+
+
+/* .rotate {
+  background-color: blue;
+  width: 300px;
+  height: 100px;
+} */
